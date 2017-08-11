@@ -1,0 +1,36 @@
+{
+  "name": "burger",
+  "version": "0.0.0",
+  "description": "Eat Da Burgerz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlow314/burger.git"
+  },
+  "keywords": [
+    "eat",
+    "lots",
+    "of",
+    "burgers",
+    "til",
+    "you",
+    "get",
+    "sick"
+  ],
+  "author": "Jeff Carlow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlow314/burger/issues"
+  },
+  "homepage": "https://github.com/carlow314/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.1"
+  }
+}
