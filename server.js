@@ -9,7 +9,7 @@ PORT = process.env.PORT || 8000;
 var app =express();
 
 //allow server access to static files
-app.use(express.static("public"));
+app.use(express.static("public/"));
 //override for PUT/DELETE methods
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: false }));

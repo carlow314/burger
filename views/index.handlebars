@@ -2,28 +2,35 @@
   <div class="container">
     <div class="col-lg-4 col-lg-offset-4">
       <div class="col-lg-12">
-        <img src="assets/burger.jpg" alt="Burger picture" class="img-responsive">
+        <img src="/assets/burger.png" alt="burger picture" class="img-responsive">
       </div>
-      <h1 id="mainTitle"> Eat-Da-Burger</h1>
+      <h1 id="mainTitle" class="text-center"> Eat-Da-Burger</h1>
     </div>
     <div class="col-lg-12">
-      <div class="col-lg-4 col-lg-offset-1" id="undevouredBurgers">
+      <div class="col-lg-6" id="undevouredBurgers">
         {{#each burgers}} {{#unless this.devoured}}
         <div class="well well-lg text-center"><b>{{this.name}}</b>
+        <br>
+        <br>
           <form action="/{{this.id}}/0?_method=PUT" method="POST">
             <button class="center-block" type="submit">Devour</button>
           </form>
+          <br>
           <form action="/{{this.id}}/?_method=DELETE" method="POST">
             <button class="center-block" type="submit">Wrong Burger!</button>
           </form>
         </div>
         {{/unless}} {{/each}}
       </div>
-      <div class="col-lg-4 col-lg-offset-1" id="devouredBurgers">
+      <div class="col-lg-6" id="devouredBurgers">
         {{#each burgers}} {{#if this.devoured}}
-        <div class="well well-lg"><b>{{this.name}}</b>
+        <div class=" devouredwell well well-lg text-center"><b>{{this.name}}</b>
+        <br>
+        <br>
           <form action="/{{this.id}}/1?_method=PUT" method="POST">
-            <button type="submit">Eat Another</button>
+            <button class="center-block" type="submit">Eat Another</button>
+            <br>
+            <br>
           </form>
         </div>
         {{/if}} {{/each}}
@@ -35,8 +42,8 @@
         <input type="text" name="name">
         <button type="submit">Submit</button>
       </form>
-      <hr>
-      <hr>
+      <br>
+      <br>
     </div>
   </div>
 </div>
